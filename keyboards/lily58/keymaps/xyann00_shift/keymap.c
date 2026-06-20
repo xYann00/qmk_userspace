@@ -71,6 +71,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format on
 };
 
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+    LAYOUT(
+        'L', 'L', 'L', 'L', 'L', 'L',                    'R', 'R', 'R', 'R', 'R', 'R',
+        'L', 'L', 'L', 'L', 'L', 'L',                    'R', 'R', 'R', 'R', 'R', 'R',
+        'L', 'L', 'L', 'L', 'L', 'L',                    'R', 'R', 'R', 'R', 'R', 'R',
+        'L', 'L', 'L', 'L', 'L', 'L', '*',          '*', 'R', 'R', 'R', 'R', 'R', 'R',
+                       '*', '*', '*', '*',          '*', '*', '*', '*');
+
 //SSD1306 OLED update loop, make sure to enable OLED_ENABLE=yes in rules.mk
 #ifdef OLED_ENABLE
 
@@ -150,13 +158,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
-bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
+bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case KY_SFQT:
-            // Immediately select the hold action when another key is tapped.
             return true;
         default:
-            // Do not select the hold action when another key is tapped.
             return false;
     }
 }
