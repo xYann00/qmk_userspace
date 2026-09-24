@@ -1,6 +1,3 @@
-// Copyright 2026 xYann00
-// SPDX-License-Identifier: GPL-2.0-or-later
-
 #include QMK_KEYBOARD_H
 
 enum my_keycodes {

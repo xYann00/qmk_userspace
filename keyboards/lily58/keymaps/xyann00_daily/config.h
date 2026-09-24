@@ -1,5 +1,3 @@
-// Copyright 2026 xYann00
-// SPDX-License-Identifier: GPL-2.0-or-later
 #pragma once
 
 // Preserve the handedness already stored in each half's EEPROM.

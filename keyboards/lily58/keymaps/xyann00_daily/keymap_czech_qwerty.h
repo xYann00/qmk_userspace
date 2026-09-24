@@ -1,5 +1,3 @@
-// Copyright 2026 xYann00
-// SPDX-License-Identifier: GPL-2.0-or-later
 #pragma once
 
 // Windows Czech (QWERTY), KLID 00010405. QMK's keymap_czech.h targets
