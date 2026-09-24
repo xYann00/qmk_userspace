@@ -1,6 +1,7 @@
 {
     "userspace_version": "1.1",
     "build_targets": [
-        ["lily58/rev1", "xyann00_shift"]
+        ["lily58/rev1", "xyann00_shift"],
+        ["lily58/rev1", "xyann00_daily"]
     ]
 }
